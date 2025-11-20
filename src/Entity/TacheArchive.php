@@ -15,7 +15,7 @@ class TacheArchive
     private ?int $id = null;
 
     #[ORM\ManyToOne(inversedBy: 'tacheArchives')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: true, onDelete: "SET NULL")]
     private ?Tache $Tache = null;
 
     #[ORM\ManyToOne(inversedBy: 'tacheArchives')]
